@@ -19,3 +19,5 @@ __90 degree USB C adapter to power pi__
 
 __Stereo Camera__
 I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Industrial/dp/B07R8LQKV4) from Amazon but shop around.
+
+__Arducam TOF camera__ <br/>
