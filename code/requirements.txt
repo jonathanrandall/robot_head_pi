@@ -1,0 +1,8 @@
+Package            Version
+------------------ --------
+ArducamDepthCamera 0.1.3
+numpy              1.26.4
+opencv-python      4.9.0.80
+pip                23.0.1
+RPi.GPIO           0.7.1
+setuptools         66.1.1

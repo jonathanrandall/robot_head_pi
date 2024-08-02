@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Camera Feed</title>
+    <style>
+        .btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .btn-on {
+            background-color: green;
+        }
+
+        .btn-off {
+            background-color: red;
+        }
+
+        .btn-default {
+            background-color: grey;
+        }
+
+        .slider {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .slider-vertical {
+            appearance: slider-vertical; /* WebKit */
+            writing-mode: vertical-lr; /* IE */
+            height: 200px;
+            width: 10px;
+            margin-left: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Changed to column to stack images */
+            align-items: center;
+        }
+
+        .image-container {
+            width: 100%;
+            text-align: center; /* Center the images horizontally */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px; /* Space between images */
+        }
+
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function turnOnLED() {
+            fetch('/led/on', { method: 'GET' })
+                .then(response => {
+                    if (response.status === 200) {
+                        document.getElementById('btn_on').classList.add('btn-on');
+                        document.getElementById('btn_on').classList.remove('btn-default');
+                        document.getElementById('btn_off').classList.add('btn-default');
+                        document.getElementById('btn_off').classList.remove('btn-off');
+                    }
+                });
+        }
+
+        function turnOffLED() {
+            fetch('/led/off', { method: 'GET' })
+                .then(response => {
+                    if (response.status === 200) {
+                        document.getElementById('btn_off').classList.add('btn-off');
+                        document.getElementById('btn_off').classList.remove('btn-default');
+                        document.getElementById('btn_on').classList.add('btn-default');
+                        document.getElementById('btn_on').classList.remove('btn-on');
+                    }
+                });
+        }
+
+        function startVideoFeed() {
+            const video = document.getElementById('video_feed1');
+            video.src = '/video_feed1';
+            const video2 = document.getElementById('video_feed2');
+            video2.src = '/video_feed2';
+        }
+
+        function stopVideoFeed() {
+            const video = document.getElementById('video_feed1');
+            video.src = '';
+            const video2 = document.getElementById('video_feed2');
+            video2.src = '';
+        }
+
+        function updateServoHorizontal(value) {
+            fetch(`/servo/horizontal?value=${value}`, { method: 'GET' });
+        }
+
+        function updateServoVertical(value) {
+            fetch(`/servo/vertical?value=${value}`, { method: 'GET' });
+        }
+    </script>
+</head>
+<body>
+    <h1>Raspberry Pi Camera Feed</h1>
+    <button id="btn_on" class="btn btn-default" onclick="turnOnLED()">Turn On LED</button>
+    <button id="btn_off" class="btn btn-default" onclick="turnOffLED()">Turn Off LED</button>
+    <br><br>
+    <div class="container">
+        <div class="image-container">
+            <img id="video_feed1" src="" alt="Camera Feed 1">
+            <input type="range" min="0" max="180" class="slider slider-vertical" id="slider_vertical" onchange="updateServoVertical(this.value)">
+        </div>
+        <div class="slider-container">
+            <input type="range" min="0" max="180" class="slider" id="slider_horizontal" onchange="updateServoHorizontal(this.value)">
+        </div>
+        <div class="image-container">
+            <img id="video_feed2" src="" alt="Camera Feed 2">
+        </div>
+        <!-- <div class="slider-container-vertical">
+            <input type="range" min="0" max="180" class="slider slider-vertical" id="slider_vertical" oninput="updateServoVertical(this.value)">
+        </div> -->
+    </div>
+    <br><br>
+    <button onclick="startVideoFeed()">Start Video Feed</button>
+    <button onclick="stopVideoFeed()">Stop Video Feed</button>
+</body>
+</html>
