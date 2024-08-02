@@ -15,3 +15,6 @@ __Stereo Camera__
 I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Industrial/dp/B07R8LQKV4) from Amazon but shop around.<br/>
 __Arducam TOF camera__ <br/>
 __breadboard__ (just broke off the side for the 5v and earth rail) <br/>
+__perfboard__ <br/>
+__2 x white leds__ (but you can use any colour you like) <br/>
+__2 x 220 ohm resistors__
