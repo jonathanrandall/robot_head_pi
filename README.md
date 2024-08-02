@@ -23,5 +23,14 @@ I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Indus
 ### Instructions
 #### Step 1:
 Mound the stereo camera, the time of flight camera and the leds on the pef board. 
-The LEDs are should be in series with 220 ohm resistors and connected to pins 17 and 26 on the pi. I use 220 ohms because the pi gives 3.3 volts.
+The LEDs are should be in series with 220 ohm resistors and connected to pins 17 and 26 on the pi. I use 220 ohms because the pi gives 3.3 volts. Also, I drilled 2.5mm holes to mount the electronics on the perf board.
 ![perf board](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/perf_board.png)
+
+#### Step 2:
+Print the following three robot head pieces from the Poppy Robot Project files listed above. [Poppy Robot Head](https://github.com/poppy-project/Poppy-eva-head-design) <br/>
+1. The eva_head_frontBottom
+2. The head_RPi4Support
+3. The head_top-part
+They also provide some connectors to attach the tft for the face, but I'm using a pef board instead of a tft, so I just used hot glue.
+__The work for this was done by 3 students of the ENSAM Bachelor of technology at Bordeaux, France: Damien MARTY, Clément GEA and Éléa CHARPNTIER, under the supervison of Jean-Luc CHARLES and Cécile DELARUE, professors at ENSAM Bordeaux.__ I have included the STL files in this repo (in the direcotry STL), just incase they become unavaiable on the original repo.
+
