@@ -1,6 +1,5 @@
 # robot_head_pi
-making a robot head with a raspberry pi inside
-
+making a robot head with a raspberry pi insi
 __Poppy Robot Project files__ 
 [Poppy Robot Head stls from the poppy opens source project](https://github.com/poppy-project/Poppy-eva-head-design) <br/>
 
