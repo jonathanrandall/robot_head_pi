@@ -24,3 +24,4 @@ I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Indus
 #### Step 1:
 Mound the stereo camera, the time of flight camera and the leds on the pef board. 
 The LEDs are should be in series with 220 ohm resistors and connected to pins 17 and 26 on the pi. I use 220 ohms because the pi gives 3.3 volts.
+![perf board](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/perf_board.png)
