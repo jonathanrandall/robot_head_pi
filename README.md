@@ -38,7 +38,7 @@ They also provide some connectors to attach the tft for the face, but I'm using 
 #### Step 3:
 This is where my design differs from the original design.
 Print the servo_head_connection-Body_v2.stl file. This is used to connect the head to the serov pan-tilt. I've also included the freecad file incase you want to adjust the position of the holes. It uses m2 screws.
-![connector for pan tilt](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/perf_board.png)
+![connector for pan tilt](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/connector_for_pan_tilt.png)
 
 
 
