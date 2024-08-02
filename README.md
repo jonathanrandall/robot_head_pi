@@ -19,6 +19,7 @@ I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Indus
 - __perf board__ <br/>
 - __2 x white leds__ (but you can use any colour you like) <br/>
 - __2 x 220 ohm resistors__
+- __tiny cylinder magnets__ I used these ones [from Amazon](https://www.amazon.com.au/dp/B0CM3KX5BC)
 
 ### Instructions
 #### Step 1:
