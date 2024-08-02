@@ -6,7 +6,7 @@ making a robot head with a raspberry pi inside
 __Poppy Robot Project files__ 
 [Poppy Robot Head stls from here](https://github.com/poppy-project/Poppy-eva-head-design) <br/>
 __Servo and servo mount__ 
-[Cheap Ali express servos](https://www.aliexpress.com/w/wholesale-servo-25kg.html?spm=a2g0o.productlist.search.0) 
+[Cheap Ali express servos](https://www.aliexpress.com/w/wholesale-servo-25kg.html?spm=a2g0o.productlist.search.0)  and 
 [servo pan tilt](https://www.aliexpress.com/w/wholesale-servo-pan-tilt-MG995-MG996.html?spm=a2g0o.productlist.search.0) <br/>
 __Raspberry Pi 4__ <br/>
 __90 degree USB C adapter to power pi__
