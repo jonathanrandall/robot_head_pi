@@ -44,7 +44,7 @@ Print the servo_head_connection-Body_v2.stl file. This is used to connect the he
 ### Step 4:
 Build the servo pan-tilt. See for example [https://youtu.be/3_fsS4YQ5Aw?si=ct7GD8LKidqGTTAt](https://youtu.be/3_fsS4YQ5Aw?si=ct7GD8LKidqGTTAt)
 
-### Step 4:
+### Step 5:
 Assemble printed files and push magnets into divets (see steps in original project as well). 
 1. Connect the +ve of the LED & resistors to pins 17 and 26 of the pi and the -ve to earth. I soldered on some dupont female jumper wires.
 2. Connect the servo pan tilt to the bottom of the head.
@@ -55,4 +55,13 @@ Assemble printed files and push magnets into divets (see steps in original proje
 
 ![inside the head](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/inside_head.png)
 
+### Step 6:
+Put the back on and mount on neck. I used a piece of actobotics channel with a pillow mount that I had lying around. This has since been replaced by U-channel, which you can get from serocity or gobilda. But you can just use whatever you have lying around, whether it's an old piece of aluminium extrusion from a 3d printer or even a chari leg.
 
+### Step 7:
+Get the code running.
+1. Install the ArducamDepthCamera. If you are on bookwork, you should do this in a virtual environment. To get the camera working see Arducam getting started [https://docs.arducam.com/Raspberry-Pi-Camera/Tof-camera/Getting-Started/](https://docs.arducam.com/Raspberry-Pi-Camera/Tof-camera/Getting-Started/) and
+[Arducam github](https://github.com/ArduCAM/Arducam_tof_camera)
+2. Note, for the getting started code from Arducam, the index of the camera is set to 0. Since we are using two cameras we need to find the index at run time. There is a function in my python code for this.
+3. To run my code, make sure the python file ```robot_head.py``` and the html file ```index.html``` are in the same directory.
+4. Since the code serves a webpage, you need to run with sudo, but for some reason, at leas for 
