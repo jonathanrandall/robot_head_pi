@@ -53,7 +53,7 @@ Assemble printed files and push magnets into divets (see steps in original proje
 5. Connect the earth of the breadboard rail to one of the earths of the pi.
 6. Place the perfboard in the face opening of the printed front of the head. You can cut this down to size. I used hot glue for this
 <br/>
-[Inside the head](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/inside_head.png)
-
+![connector for pan tilt](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/inside_head.png)
+![inside the head](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/inside_head.png)
 
 
