@@ -16,6 +16,11 @@ __Poppy Robot Project files__
 I used [this one](https://www.amazon.com.au/Synchronized-Stereo-USB-Camera-Industrial/dp/B07R8LQKV4) from Amazon but shop around.<br/>
 - __Arducam TOF camera__ <br/>
 - __breadboard__ (just broke off the side for the 5v and earth rail) <br/>
-- __perfboard__ <br/>
+- __perf board__ <br/>
 - __2 x white leds__ (but you can use any colour you like) <br/>
 - __2 x 220 ohm resistors__
+
+### Instructions
+#### Step 1:
+Mound the stereo camera, the time of flight camera and the leds on the pef board. 
+The LEDs are should be in series with 220 ohm resistors and connected to pins 17 and 26 on the pi. I use 220 ohms because the pi gives 3.3 volts.
