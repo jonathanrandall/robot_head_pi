@@ -65,3 +65,5 @@ Get the code running.
 3. To run my code, make sure the python file ```robot_head.py``` and the html file ```index.html``` are in the same directory.
 4. Since the code serves a webpage, you need to run with sudo, but for some reason, at least for me, I had to qualify the python3 command with the full path of the virtual environment. So I had to type ```sudo path/to/venv/python3 robot_head.py```
 5. Go to the pi ip in your browser. I tested this from a computer and a tablet but not a smart phone. You can find the ip by typing ifconfig, or you can just enter the piname.local.
+
+![pi head](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/robot_head.png)
