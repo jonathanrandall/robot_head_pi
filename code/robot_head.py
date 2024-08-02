@@ -11,7 +11,6 @@ import sys
 import ArducamDepthCamera as ac
 import numpy as np
 
-from demo2 import process_frame
 
 MAX_DISTANCE = 4
 
@@ -59,7 +58,17 @@ import subprocess
 #     cam.stop()
 #     cam.close()
     
+def process_frame(depth_buf: np.ndarray, amplitude_buf: np.ndarray) -> np.ndarray:
+        
+    depth_buf = np.nan_to_num(depth_buf)
 
+    amplitude_buf[amplitude_buf<=7] = 0
+    amplitude_buf[amplitude_buf>7] = 255
+
+    depth_buf =(1 - (depth_buf/MAX_DISTANCE)) * 255
+    depth_buf = np.clip(depth_buf, 0, 255)
+    result_frame = depth_buf.astype(np.uint8)  & amplitude_buf.astype(np.uint8)
+    return result_frame 
 class ArduCamCam(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
