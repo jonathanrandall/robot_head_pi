@@ -50,7 +50,9 @@ Assemble printed files and push magnets into divets (see steps in original proje
 3. Connect the servo data (middle) wires to pins 18 and 27 of the pi.
 4. Connect the servo +ve and -ve to the plus 5v and earth on the breadboard rail (see photo).
 5. Connect the earth of the breadboard rail to one of the earths of the pi.
-6. Place the perfboard in the face opening of the printed front of the head. You can cut this down to size. I used hot glue for this
+6. Place the perfboard in the face opening of the printed front of the head. You can cut this down to size. I used hot glue for this.
+7. Connect the Arducam TOF camera to the pi camera input.
+8. Connect the stereo camera to the usb pi input.
 
 ![inside the head](https://github.com/jonathanrandall/robot_head_pi/blob/main/images/inside_head.png)
 
